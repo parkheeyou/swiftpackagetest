@@ -10,7 +10,7 @@ import SwiftUI
 
 // 커스텀 토스트 뷰
 @available(iOS 13.0, *)
-struct Toast: ViewModifier {
+public struct Toast: ViewModifier {
   // these correspond to Android values f
   // or DURATION_SHORT and DURATION_LONG
   static let short: TimeInterval = 2
@@ -20,7 +20,7 @@ struct Toast: ViewModifier {
   @Binding var isShowing: Bool
   let config: Config
 
-  func body(content: Content) -> some View {
+  public func body(content: Content) -> some View {
     ZStack {
       content
       toastView
