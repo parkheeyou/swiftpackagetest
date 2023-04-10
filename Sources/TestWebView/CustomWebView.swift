@@ -12,14 +12,14 @@ import Combine
 import WebKit
 
 @available(iOS 13.0, *)
-struct WebView: UIViewRepresentable, WebViewHandlerDelegate {
+public struct WebView: UIViewRepresentable, WebViewHandlerDelegate {
     //var url: String
     var url: URL
     
     @ObservedObject var viewModel: WebViewModel
     
     // 변경 사항을 전달하는데 사용하는 사용자 지정 인스턴스
-    func makeCoordinator() -> Coordinator {
+    public func makeCoordinator() -> Coordinator {
         Coordinator(self)
     }
     
@@ -32,7 +32,7 @@ struct WebView: UIViewRepresentable, WebViewHandlerDelegate {
     }
     
     // 뷰 객체를 생성하고 초기 상태를 구성. 딱 한번만 호출
-    func makeUIView(context: Context) -> WKWebView {
+    public func makeUIView(context: Context) -> WKWebView {
         let preferences = WKPreferences()
         // Javascript가 사용자 상호 작용없이 창을 열 수 있는지 여부
         preferences.javaScriptCanOpenWindowsAutomatically = false
@@ -68,7 +68,7 @@ struct WebView: UIViewRepresentable, WebViewHandlerDelegate {
     }
     
     // 지정된 뷰의 상태를 다음의 새 정보로 업데이트
-    func updateUIView(_ uiView: WKWebView, context: Context) {
+    public func updateUIView(_ uiView: WKWebView, context: Context) {
         // 업데이트 내용
         //uiView.loadFileURL(request.url!, allowingReadAccessTo: request.url!.deletingLastPathComponent())
         print("웹 이동")
