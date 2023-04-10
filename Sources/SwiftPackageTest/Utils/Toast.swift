@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 // 커스텀 토스트 뷰
+@available(iOS 13.0, *)
 struct Toast: ViewModifier {
   // these correspond to Android values f
   // or DURATION_SHORT and DURATION_LONG
@@ -79,6 +80,7 @@ struct Toast: ViewModifier {
   }
 }
 
+@available(iOS 13.0, *)
 extension View {
   func toast(message: String,
              isShowing: Binding<Bool>,

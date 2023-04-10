@@ -8,6 +8,7 @@
 import Foundation
 import AVFoundation
 
+@available(iOS 13.0, *)
 final class PermissionManager: ObservableObject {
     @Published var permissionGranted = false
     

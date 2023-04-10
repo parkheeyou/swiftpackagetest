@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 // 공통 모듈 필요기능 구현
+@available(iOS 13.0, *)
 final class CommonUtils {
     // UUID
     var deviceUUID: String {
