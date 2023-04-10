@@ -1,8 +1,10 @@
 public struct SwiftPackageTest {
     public private(set) var text = "Hello, World!"
-    public var commonUtils: CommonUtils
-
+    
     public init() {
-        commonUtils = CommonUtils()
+    }
+    
+    public func hello() {
+        print("package test hello")
     }
 }
