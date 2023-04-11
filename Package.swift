@@ -10,8 +10,6 @@ let package = Package(
         .library(
             name: "SwiftPackageTest",
             targets: ["SwiftPackageTest"]),
-        .library(name: "TestWebView",
-                 targets: ["TestWebView"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -23,8 +21,6 @@ let package = Package(
         .target(
             name: "SwiftPackageTest",
             dependencies: []),
-        .target(name: "TestWebView",
-               dependencies: []),
         .testTarget(
             name: "SwiftPackageTestTests",
             dependencies: ["SwiftPackageTest"]),
