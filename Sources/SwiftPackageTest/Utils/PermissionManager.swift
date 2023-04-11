@@ -9,8 +9,11 @@ import Foundation
 import AVFoundation
 
 @available(iOS 13.0, *)
-open class PermissionManager: ObservableObject {
+public class PermissionManager: ObservableObject {
     @Published public var permissionGranted = false
+    
+    public init() {
+    }
     
     /**
      * 카메라 권한을 요청
