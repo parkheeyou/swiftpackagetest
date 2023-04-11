@@ -10,7 +10,7 @@ import Combine
 import UIKit
 
 @available(iOS 13.0, *)
-final class WebViewModel: ObservableObject {
+public class WebViewModel: ObservableObject {
     var foo = PassthroughSubject<String, Never>() // app -> web
     var back = PassthroughSubject<String, Never>()  // app -> web
     var bar = PassthroughSubject<Bool, Never>() // web -> app
