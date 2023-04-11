@@ -56,7 +56,7 @@ public struct Toast: ViewModifier {
     .transition(config.transition)
   }
 
-  struct Config {
+  public struct Config {
     let textColor: Color
     let font: Font
     let backgroundColor: Color
@@ -82,7 +82,7 @@ public struct Toast: ViewModifier {
 
 @available(iOS 13.0, *)
 extension View {
-  func toast(message: String,
+  public func toast(message: String,
              isShowing: Binding<Bool>,
              config: Toast.Config) -> some View {
     self.modifier(Toast(message: message,
@@ -90,7 +90,7 @@ extension View {
                         config: config))
   }
 
-  func toast(message: String,
+  public func toast(message: String,
              isShowing: Binding<Bool>,
              duration: TimeInterval) -> some View {
     self.modifier(Toast(message: message,
