@@ -9,14 +9,14 @@ import Foundation
 import AVFoundation
 
 @available(iOS 13.0, *)
-final class PermissionManager: ObservableObject {
-    @Published var permissionGranted = false
+final public class PermissionManager: ObservableObject {
+    @Published public var permissionGranted = false
     
     /**
      * 카메라 권한을 요청
      *
      */
-    func requestCameraPermission() {
+    public func requestCameraPermission() {
         AVCaptureDevice.requestAccess(for: .video, completionHandler: { granted in
             if granted {
                 print("카메라 권한 허용")

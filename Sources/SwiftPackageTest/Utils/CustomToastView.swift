@@ -9,10 +9,10 @@ import Foundation
 import SwiftUI
 
 @available(iOS 13.0, *)
-struct ToastView: View {
+public struct ToastView: View {
     let message: String
     
-    var body: some View {
+    public var body: some View {
         VStack {
             Text(message)
                 .font(.headline)
